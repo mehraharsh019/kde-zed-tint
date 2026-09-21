@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=KDE Zed Tint
+Comment=Sync Zed editor theme with KDE accent color
+Exec=%h/.local/bin/kde-zed-tint.py --watch
+Type=Application
+Categories=
+X-KDE-autostart-phase=2
+X-KDE-autostart-after=panel

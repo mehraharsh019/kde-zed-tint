@@ -1,0 +1,13 @@
+[Unit]
+Description=KDE Zed Theme Tint — regenerate Zed theme on KDE accent color change
+After=graphical-session.target
+PartOf=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=%h/.local/bin/kde-zed-tint.py --watch
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=graphical-session.target
