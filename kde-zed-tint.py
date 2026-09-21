@@ -21,17 +21,19 @@ KDEGLOBALS      = Path.home() / ".config" / "kdeglobals"
 ZED_THEMES_DIR  = Path.home() / ".config" / "zed" / "themes"
 OUTPUT_THEME    = ZED_THEMES_DIR / "kde-tint.json"
 
-# ── Base dark palette (Zed One Dark-ish, all in hex) ──────────────────────────
+# ── Base dark palette (neutral — Adwaita / Material-ish, all in hex) ──────────
+# Surfaces are pure neutral greys (r == g == b) so the accent tint lands on a
+# clean base instead of muddying an already blue-tinted One Dark background.
 # These are the "fixed" values that won't be tinted.
 BASE = {
-    "bg":           "#1e2227",
-    "bg_alt":       "#21252b",
-    "bg_elevated":  "#282c34",
-    "surface":      "#2c313a",
-    "overlay":      "#3a3f4b",
-    "fg":           "#abb2bf",
-    "fg_muted":     "#636d83",
-    "fg_subtle":    "#4b5263",
+    "bg":           "#1e1e1e",   # Adwaita view background
+    "bg_alt":       "#242424",   # Adwaita window background
+    "bg_elevated":  "#2b2b2b",
+    "surface":      "#303030",   # Adwaita headerbar / sidebar
+    "overlay":      "#3a3a3a",
+    "fg":           "#b4b4b4",
+    "fg_muted":     "#787878",
+    "fg_subtle":    "#565656",
     # syntax
     "red":          "#e06c75",
     "orange":       "#d19a66",
@@ -40,7 +42,7 @@ BASE = {
     "cyan":         "#56b6c2",
     "blue":         "#61afef",
     "purple":       "#c678dd",
-    "comment":      "#5c6370",
+    "comment":      "#666666",
 }
 
 TINT_STRENGTH = 0.075   # 7.5 % — same ratio used by adw-tint-kde
